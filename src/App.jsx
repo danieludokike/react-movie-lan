@@ -9,14 +9,6 @@ import MovieCard from "./MovieCard";
 
 const APIURL = "http://www.omdbapi.com?apikey=7643ddf8"
 
-const movie1 = {
-    "Title": "Italian Spiderman",
-    "Year": "2007",
-    "imdbID": "tt2705436",
-    "Type": "movie",
-    "Poster": "https://m.media-amazon.com/images/M/MV5BYjFhN2RjZTctMzA2Ni00NzE2LWJmYjMtNDAyYTllOTkyMmY3XkEyXkFqcGdeQXVyNTA0OTU0OTQ@._V1_SX300.jpg"
-}
-
 const App = () => {
     
     const [movies, setMovies] = useState([]);
@@ -30,9 +22,9 @@ const App = () => {
         setMovies(data.Search);
     }
 
-    // useEffect( () => {
-    //     searchMovie("Spiderman");
-    // }, []);
+    useEffect( () => {
+        searchMovie("spiderman");
+    }, []);
 
 
     return (
